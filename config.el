@@ -3,6 +3,8 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
+(setq-default evil-shift-width 2
+              tab-width 2)
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
@@ -13,10 +15,10 @@
       ;; disabling them outweighs the utility of always keeping them on.
       display-line-numbers-type nil
 
-      company-idle-delay 0.25
+      company-idle-delay 0.1
 
-      which-key-idle-delay 0.25
-      which-key-idle-secondary-delay 0.25)
+      which-key-idle-delay 0.15
+      which-key-idle-secondary-delay 0.15)
 
 ;; Prevents some cases of Emacs flickering
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
@@ -44,7 +46,7 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-one)
 
-(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'normal))
+(setq doom-font (font-spec :family "SF Mono" :size 12 :weight 'normal))
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
