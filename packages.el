@@ -48,3 +48,20 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
+
+;; lsp
+(package! lsp-mode)
+(package! lsp-ui :recipe (:host github :repo "emacs-lsp/lsp-ui"))
+(package! company-lsp)
+
+;; python
+(package! py-yapf)
+
+;; lisp
+(package! aggressive-indent)
+(package! lispy)
+(package! lispyville)
+;; (package! dash)
+
+;; nov.el
+(package! nov)
