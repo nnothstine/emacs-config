@@ -3,21 +3,24 @@
 (load! "+bindings")
 
 (setq tab-width 2)
+;; (setq-default standard-indent 2)
+;; (setq-default evil-shift-width 2)
 (setq display-line-numbers nil)
 
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
-
-(setq doom-theme 'doom-one)
-
-(setq doom-font (font-spec :family "SF Mono" :size 12)
-      doom-variable-pitch-font (font-spec :family "SF Mono" :size 13))
 
 (use-package! company
   :config
   (setq
    company-idle-delay 1.5
    company-minimum-prefix-length 5))
+
+;; https://github.com/hlissner/doom-emacs/issues/3775
+(use-package! evil
+  :config
+  (setq evil-split-window-below t
+        evil-vsplit-window-right t))
 
 (use-package! magit
   :config
@@ -30,6 +33,7 @@
   (setq projectile-project-search-path '("~/Projects" "~/.config")))
 
 (use-package! nov-mode
+  :init (setq nov-text-width 80)
   :mode "\\.epub$")
 
 (use-package! which-key
@@ -38,7 +42,7 @@
         which-key-idle-secondary-delay 0.15))
 
 (load! "+org")
-
+;; (load! "+nov")
 ;; https://github.com/Malabarba/aggressive-indent-mode/issues/138
 ;; https://github.com/Malabarba/aggressive-indent-mode/issues/137
 ;; https://discordapp.com/channels/406534637242810369/406624667496087572/714350381324304446

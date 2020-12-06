@@ -45,6 +45,11 @@
      :ig "<tab>" yas-maybe-expand
      :v  "<tab>" #'yas-insert-snippet)))
 
+(map!
+      :leader
+      "f t" 'find-in-dotfiles
+      "f T" 'browse-dotfiles)
+
 (use-package! dired
   :init
   (when (string= system-type "darwin")
@@ -61,10 +66,10 @@
  (:map help-mode-map
    :n "q"   #'quit-window))
 
-(map!
- :i "TAB" #'+company/complete
+;; (map!
+ ;; :i "TAB" #'+company/complete
  ;; TODO: Need a more generic mechanism of doing this to allow for four or two tabs
- :i "M-TAB" (lambda () (interactive) (insert "\s\s")))
+ ;; :i "M-TAB" (lambda () (interactive) (insert "\s\s")))
 
 (map!
  (:after company

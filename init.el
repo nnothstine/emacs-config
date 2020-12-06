@@ -17,6 +17,10 @@
 (setq org-directory (expand-file-name "~/org"))
 (setq org-roam-directory (expand-file-name "~/org/notes"))
 
+(setq doom-theme 'doom-one)
+
+(setq doom-font (font-spec :family "SF Mono" :size 12)
+      doom-variable-pitch-font (font-spec :family "SF Mono" :size 13))
 
 (doom! :input
        ;;chinese
