@@ -22,6 +22,10 @@
   (setq evil-split-window-below t
         evil-vsplit-window-right t))
 
+(use-package! evil-snipe
+  :config
+  (setq evil-snipe-scope 'buffer))
+
 (use-package! magit
   :config
   (setq magit-repository-directories

@@ -50,6 +50,11 @@
       "f t" 'find-in-dotfiles
       "f T" 'browse-dotfiles)
 
+(map!
+ (:leader
+   :desc "Find char forwards" "j" 'evilem-motion-find-char
+   :desc "Find char backwards" "J" 'evilem-motion-find-char-backward))
+
 (use-package! dired
   :init
   (when (string= system-type "darwin")
